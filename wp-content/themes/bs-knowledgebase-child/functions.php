@@ -1,4 +1,43 @@
 <?php
+// Allow SVG Upload
+//////////////////////////////////////////////////////////////////////
+function cc_mime_types($mimes) {
+  $mimes["svg"] = "image/svg+xml";
+  return $mimes;
+}
+add_filter("upload_mimes", "cc_mime_types");
+
+
+// Remove Auto-Complete from login page password field
+//////////////////////////////////////////////////////////////////////
+add_action('login_init', 'acme_autocomplete_login_init');
+function acme_autocomplete_login_init()
+{
+    ob_start();
+}
+
+add_action('login_form', 'acme_autocomplete_login_form');
+function acme_autocomplete_login_form()
+{
+    $content = ob_get_contents();
+    ob_end_clean();
+    $content = str_replace('id="user_pass"', 'id="user_pass" autocomplete="off"', $content);
+    echo $content;
+}
+
+// Remove CSS version Parameter (messes with cacheing in chrome)
+//////////////////////////////////////////////////////////////////////
+function remove_cssjs_ver( $src ) {
+    if( strpos( $src, '?ver=' ) )
+        $src = remove_query_arg( 'ver', $src );
+    return $src;
+}
+add_filter( 'style_loader_src', 'remove_cssjs_ver', 10, 2 );
+add_filter( 'script_loader_src', 'remove_cssjs_ver', 10, 2 );
+
+update_option( 'siteurl', 'http://localhost:8888/bs-knowledgebase' );
+update_option( 'home', 'http://localhost:8888/bs-knowledgebase' );
+
 function understrap_remove_scripts() {
     wp_dequeue_style( 'understrap-styles' );
     wp_deregister_style( 'understrap-styles' );
@@ -18,7 +57,7 @@ function theme_enqueue_styles() {
 	$the_theme = wp_get_theme();
     wp_enqueue_style( 'child-understrap-styles', get_stylesheet_directory_uri() . '/css/child-theme.min.css', array(), $the_theme->get( 'Version' ) );
     wp_enqueue_script( 'jquery');
-	wp_enqueue_script( 'popper-scripts', get_template_directory_uri() . '/js/popper.min.js', array(), false);
+    wp_enqueue_script( 'popper-scripts', get_template_directory_uri() . '/js/popper.min.js', array(), false);
     wp_enqueue_script( 'child-understrap-scripts', get_stylesheet_directory_uri() . '/js/child-theme.min.js', array(), $the_theme->get( 'Version' ), true );
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
@@ -53,9 +92,9 @@ function understrap_posted_on() {
 endif;
 
 function bs_tags( $before = '<li>', $sep = '</li><li>', $after = '</li>' ) {
- 
+
     $the_tags = get_the_tag_list( $before, $sep, $after );
- 
+
     if ( ! is_wp_error( $the_tags ) ) {
         echo $the_tags;
     }

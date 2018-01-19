@@ -6,8 +6,8 @@
  */
 
 ?>
-		<?php the_title( sprintf( '<div id="bs-search-results"> <a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),'</a></div>' ); ?>
-		<div class="mt-3" id="category-box">
+		<?php the_title( sprintf( '<div id="bs-search-results"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),'</a></div>' ); ?>
+		<div class="category-box pt-3">
 			<?php bs_category();?>
 		</div>
 		<?php if ( 'post' == get_post_type() ) : ?>

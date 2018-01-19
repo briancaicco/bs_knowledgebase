@@ -20,6 +20,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 
@@ -35,7 +36,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav ml-auto my-2 my-lg-0">
 							<li class="nav-item">
-								<a class="nav-link" href="#"><b>Home</b><span class="sr-only">(current)</span></a>
+								<a class="nav-link" href="<?php bloginfo('url')?>"><b>Home</b><span class="sr-only">(current)</span></a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#"><b>Categories</b></a>

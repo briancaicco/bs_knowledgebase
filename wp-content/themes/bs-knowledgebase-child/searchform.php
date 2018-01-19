@@ -7,7 +7,7 @@
 
 ?>
 
-<div class="container-fluid ">
+<div class="container">
 	<form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
 	<div class="input-group pb-3 pr-3 border border-dark border-top-0 border-left-0 border-right-0">
 		<input class="form-control" id="bs-search-bar" name="s" type="text" value="<?php the_search_query(); ?>">

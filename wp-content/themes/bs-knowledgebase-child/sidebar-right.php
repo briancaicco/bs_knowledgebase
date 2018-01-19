@@ -12,7 +12,7 @@ if ( ! is_active_sidebar( 'right-sidebar' ) ) {
 // when both sidebars turned on reduce col size to 3 from 4.
 $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
-<div class="container">
+
 	<div class="col">
 		<p class="lead" id="bs-revised">Last Revised</p>
 		<div id="bs-time-posted"><?php understrap_posted_on(); ?></div><br>
@@ -27,4 +27,3 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 			</ul>
 		</div>
 	</div>
-</div>
