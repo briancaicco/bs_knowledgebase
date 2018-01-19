@@ -9683,7 +9683,8 @@ body {
   border-top: none !important;
   border-right: none !important;
   border-left: none !important;
-  border-bottom: none !important; }
+  border-bottom: none !important;
+  background: transparent; }
 
 .truncate {
   color: #adb5bd;

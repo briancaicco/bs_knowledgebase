@@ -29,7 +29,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row">
 			<div class="container-fluid">
 				<nav class="navbar navbar-expand-lg navbar-light bg-white">
-					<a class="navbar-brand" href="#"><img src="<?php echo  get_stylesheet_directory_uri(); ?>/img/bs-favicon.svg"></a>
+					<a class="navbar-brand" href="<?php bloginfo('url')?>"><img src="<?php echo  get_stylesheet_directory_uri(); ?>/img/bs-favicon.svg"></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
