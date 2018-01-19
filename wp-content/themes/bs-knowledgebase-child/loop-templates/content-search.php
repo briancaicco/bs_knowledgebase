@@ -5,12 +5,14 @@
  * @package understrap
  */
 
-?>
-		<?php the_title( sprintf( '<div id="bs-search-results"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),'</a></div>' ); ?>
-		<div class="category-box pt-3">
-			<?php bs_category();?>
-		</div>
-		<?php if ( 'post' == get_post_type() ) : ?>
+?>		
+<div class="bs-search-results">
+	<?php the_title( sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),'</a>' ); ?>
+</div>
+<div class="category-box pt-3 bs-search-results">
+	<?php bs_category();?>
+</div>
+<?php if ( 'post' == get_post_type() ) : ?>
 			<!-- <div class="entry-meta">
 				<?php understrap_posted_on(); ?>
 			</div> -->

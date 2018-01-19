@@ -36,16 +36,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav ml-auto my-2 my-lg-0">
 							<li class="nav-item">
-								<a class="nav-link" href="<?php bloginfo('url')?>"><b>Home</b><span class="sr-only">(current)</span></a>
+								<a class="nav-link" href="<?php bloginfo('url')?>"><b>HOME</b><span class="sr-only">(current)</span></a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#"><b>Categories</b></a>
+								<a class="nav-link" href="#"><b>CATEGORIES</b></a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#"><b>Login</b></a>
+								<a class="nav-link" href="http://localhost:8888/bs-knowledgebase/wp-login.php"><b>LOGIN</b></a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#"><img src="<?php echo  get_stylesheet_directory_uri(); ?>/img/bs-search.svg"></a>
+								<a class="nav-link" href="<?php bloginfo('url')?>"><img src="<?php echo  get_stylesheet_directory_uri(); ?>/img/bs-search.svg"></a>
 							</li>
 						</ul>
 <!-- 						<form class="form-inline my-2 my-lg-0">

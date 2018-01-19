@@ -14,14 +14,14 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
 
 	<div class="col">
-		<p class="lead" id="bs-revised">Last Revised</p>
-		<div id="bs-time-posted"><?php understrap_posted_on(); ?></div><br>
-		<p class="lead" id="bs-revised">Categories</p>
-		<div class="mr-auto" id="category-box">
+		<p class="lead bs-revised">Last Revised</p>
+		<div class="bs-time-posted pt-3"><?php understrap_posted_on(); ?></div><br>
+		<p class="lead bs-revised">Categories</p>
+		<div class="mr-auto category-box pt-3">
 			<?php bs_category();?>
 		</div>
-		<p class="lead mt-4" id="bs-revised">Tags</p>
-		<div class="mr-auto" id="category-box">
+		<p class="lead mt-4 bs-revised">Tags</p>
+		<div class="mr-auto category-box pt-3">
 			<ul>
 				<?php bs_tags();?>
 			</ul>

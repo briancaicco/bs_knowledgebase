@@ -9714,19 +9714,18 @@ input:focus {
 .navbar-brand {
   padding-left: 10px; }
 
-#bs-title {
+.bs-title {
   color: #868e96 !important;
   font-size: 27px !important;
   font-weight: 200 !important; }
 
-#bs-revised {
+.bs-revised {
   color: #868e96 !important;
-  font-size: 17px !important;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ced4da; }
+  font-size: 17px !important; }
 
-#bs-time-posted {
-  font-size: 12px !important; }
+.bs-time-posted {
+  font-size: 12px !important;
+  border-top: 1px solid #ced4da !important; }
 
 .category-box {
   border-top: 1px solid #ced4da !important; }
@@ -9750,17 +9749,20 @@ input:focus {
       padding-left: 0px !important; }
 
 .card {
-  padding: 25px !important;
+  padding: 25px 25px 15	px 25px !important;
   background-color: white !important;
   margin: none !important;
   border-radius: 5px !important;
   box-shadow: none !important; }
   .card a {
     color: #868e96 !important; }
+  .card .bs-search-results {
+    margin: 20px !important;
+    padding-bottom: 0px !important; }
 
-#bs-search-results {
-  margin-top: 10px !important;
-  padding-bottom: 40px !important; }
+.bs-search-results {
+  margin: 20px !important;
+  padding-bottom: 20px !important; }
 
 .post-category {
   padding: 0px !important;

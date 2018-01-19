@@ -74,20 +74,19 @@ input:focus {
 	padding-left: 10px;
 }
 
-#bs-title {
+.bs-title {
 	color: $gray-600 !important;
 	font-size: 27px !important; 
 	font-weight: 200 !important;
 }
-#bs-revised {
+.bs-revised {
 	color: $gray-600 !important;
-	font-size: 17px !important;
-	padding-bottom: 20px;
-	border-bottom: 1px solid $gray-400;
+	font-size: 17px !important;;
 }
 
-#bs-time-posted {
+.bs-time-posted {
 	font-size: 12px !important;
+	border-top: 1px solid $gray-400 !important
 }
 
 .category-box {
@@ -117,7 +116,7 @@ input:focus {
 	}
 }
 .card {
-	padding: 25px !important;
+	padding: 25px 25px 15	px 25px !important;
 	background-color: white !important;
 	margin: none !important;
 	border-radius: 5px !important;
@@ -125,12 +124,16 @@ input:focus {
 	a {
 		color: $gray-600 !important;
 	}
+	.bs-search-results {
+		margin: 20px !important;
+		padding-bottom: 0px !important;
+	}
 }
 
-#bs-search-results {
-	margin-top: 10px !important;
-	padding-bottom: 40px !important;
-	}
+.bs-search-results {
+	margin: 20px !important;
+	padding-bottom: 20px !important;
+}
 
 .post-category {
 	padding: 0px !important;

@@ -18,7 +18,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			esc_html__(' '), get_search_query()); ?>
 			<?php /* Start the Loop */ ?>
 			<div class="row ml-5 pl-5">
-				<div class="col mt-5" id="bs-title">
+				<div class="col mt-5 bs-title">
 					<h3>Search Results</h3>
 				</div>
 			</div>
@@ -31,16 +31,16 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						 */
 
 						?><div class="col-md-4 d-flex align-items-stretch">
-							<div class="card mt-5 w-100"><?php
+							<div class="card mt-5 w-100 p-1 pt-2"><?php
 							get_template_part( 'loop-templates/content', 'search' );
 							?>	</div>
 						</div>
 					<?php endwhile; ?>
 				<?php endif;  ?>
 				<div class="row ml-5 pl-5">
-					<div class="col mt-5" id="bs-title">
+					<!-- <div class="col mt-5 bs-title">
 						<h3> Not articles found </h3>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>

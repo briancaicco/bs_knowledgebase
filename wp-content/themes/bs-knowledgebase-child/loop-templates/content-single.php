@@ -7,7 +7,7 @@
 
 ?>
 <div class="row">
-	<div class="col mb-5 mt-5 ml-0 pl-0" id="bs-title">
+	<div class="bs-title col mb-5 mt-5 ml-0 pl-0" >
 		<?php the_title(); ?>
 	</div>	
 </div>
