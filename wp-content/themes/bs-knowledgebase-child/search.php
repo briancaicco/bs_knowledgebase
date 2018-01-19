@@ -11,7 +11,6 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
-
 <div class="container-fluid">
 	<?php if ( have_posts() ) : ?>
 		<?php printf(
@@ -20,7 +19,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			<?php /* Start the Loop */ ?>
 			<div class="row ml-5 pl-5">
 				<div class="col mt-5" id="bs-title">
-					<p>Search Results</p>
+					<h3>Search Results</h3>
 				</div>
 			</div>
 			<div class="row flex-row pl-5 ml-5 mr-5">
@@ -33,11 +32,18 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 						?><div class="col-md-4 d-flex align-items-stretch">
 							<div class="card mt-5 w-100"><?php
-								get_template_part( 'loop-templates/content', 'search' );
-						?>	</div>
+							get_template_part( 'loop-templates/content', 'search' );
+							?>	</div>
 						</div>
 					<?php endwhile; ?>
-				<?php endif; ?>
+				<?php endif;  ?>
+				<div class="row ml-5 pl-5">
+					<div class="col mt-5" id="bs-title">
+						<h3> Not articles found </h3>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
+
+<?php get_footer(); ?>
