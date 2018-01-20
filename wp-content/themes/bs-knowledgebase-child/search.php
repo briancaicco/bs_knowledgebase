@@ -11,18 +11,18 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
-<div class="container-fluid">
+<div class="container">
 	<?php if ( have_posts() ) : ?>
 		<?php printf(
 			/* translators:*/
 			esc_html__(' '), get_search_query()); ?>
 			<?php /* Start the Loop */ ?>
-			<div class="row ml-5 pl-5">
+			<div class="row">
 				<div class="col mt-5 bs-title">
 					<h3>Search Results</h3>
 				</div>
 			</div>
-			<div class="row flex-row pl-5 ml-5 mr-5">
+			<div class="row flex-row">
 				<?php while ( have_posts() ) : the_post(); ?><?php
 						/**
 						 * Run the loop for the search to output the results.
@@ -30,18 +30,21 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						 * called content-search.php and that will be used instead.
 						 */
 
-						?><div class="col-md-4 d-flex align-items-stretch">
-							<div class="card mt-5 w-100 p-1 pt-2"><?php
-							get_template_part( 'loop-templates/content', 'search' );
-							?>	</div>
+						?>
+						<div class="col-md-4 d-flex align-items-stretch">
+							<div class="card mt-5 w-100 p-1 pt-2">
+								<?php get_template_part( 'loop-templates/content', 'search' ); ?>	
+							</div>
 						</div>
-					<?php endwhile; ?>
-				<?php endif;  ?>
-				<div class="row ml-5 pl-5">
-					<!-- <div class="col mt-5 bs-title">
-						<h3> Not articles found </h3>
-					</div> -->
-				</div>
+					<?php endwhile; else : ?>
+						<div class="row">
+							<div class="col text-center ml-auto mt-3 mt-md-5 pt-md-5">
+								<h3>Sorry mate, nothing here matches your search. </h3>
+								<h3>¯\_(ツ)_/¯</h3>
+								<p><a href="<?php bloginfo( 'url' ); ?>">Try again?</a></p>
+							</div>
+						</div>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>

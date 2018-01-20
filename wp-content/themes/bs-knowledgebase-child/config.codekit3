@@ -43,6 +43,13 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"\/css\/child-theme.min.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/css\/child-theme.min.css.map",
+		"oF": 0
+		},
 	"\/css\/custom-editor-style.css": {
 		"aP": 1,
 		"bl": 0,
@@ -549,16 +556,6 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
-		},
-	"\/sass\/child-theme.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/sass\/child-theme-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"\/sass\/child-theme.scss": {
 		"aP": 0,
@@ -3986,7 +3983,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http:\/\/localhost:8888\/wordpress",
+	"externalServerAddress": "http:\/\/localhost:8888\/bs-knowledgebase",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",

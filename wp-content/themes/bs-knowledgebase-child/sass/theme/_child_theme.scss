@@ -4,69 +4,67 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
+#bs-search-btn{
+	background: transparent;
+	display: inline-block;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	user-select: none;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#bs-search-bar{
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: none;
+	background: transparent;
+	font-size: 24px;
+	color: $gray-600;
+}
+
+
+// Forms
+/////////////////////////////////////////////////////////////
 .form-control:focus, .wpcf7 input[type=text]:focus, .wpcf7 input[type=search]:focus, .wpcf7 input[type=url]:focus, .wpcf7 input[type=tel]:focus, .wpcf7 input[type=number]:focus, .wpcf7 input[type=range]:focus, .wpcf7 input[type=date]:focus, .wpcf7 input[type=month]:focus, .wpcf7 input[type=week]:focus, .wpcf7 input[type=time]:focus, .wpcf7 input[type=datetime]:focus, .wpcf7 input[type=datetime-local]:focus, .wpcf7 input[type=color]:focus, .wpcf7 input[type=email]:focus, .wpcf7 input[type=file]:focus, .wpcf7 input[type=submit]:focus, .wpcf7 select:focus, .wpcf7 textarea:focus, .wpcf7 .wpcf7-validation-errors:focus {
 	box-shadow: 0 0 0 0.2rem rgba(225, 225, 225, 0);
 }
 
-
-#bs-search-btn{
-	background: transparent !important;
-	display: inline-block !important;
-	font-weight: 400 !important;
-	text-align: center !important;
-	white-space: nowrap !important;
-	vertical-align: middle !important;
-	user-select: none !important;
-	border-top: none !important;
-	border-left: none !important;
-	border-right: none !important;
-	border-bottom: none !important;
-	padding: 0.375rem 0.75rem !important;
-	font-size: 1rem !important;
-	line-height: 1.5 !important;
-	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
-}
-
-#bs-search-bar{
-	border-top: none !important;
-	border-right: none !important;
-	border-left: none !important;
-	border-bottom: none !important;
-	background: transparent;
-}
-
-.truncate{
-	color: $gray-500;
-	font-family: Georgia,Times,Times New Roman,serif; 
-}
-
 .input-group{
-	border-color: #DFDFDF !important;
+	border-color: $gray-400 !important;
 }
-
-
-#homepage{
-	margin-top: 150px !important;
-}
-
 
 input:focus {
-	outline: none !important;
+	outline: none;
 }
 
-.bs-date {
-	color: #9B9B9B !important;
-}
+
+// Navigation
+/////////////////////////////////////////////////////////////
 
 .nav-item{
-	font-size: 14px !important;
-	padding-right: 10px !important;
-	li {
-		color: #5A5A5A !important;
+	font-size: 14px;
+	padding-right: 10px;
+	.nav-link{
+		color: $gray-700 !important;
+		text-transform: uppercase;
+		transition: all .35s;
+		&:hover{
+			color: $gray-600 !important;
+		}
 	}
 	img {
-		width: 14px !important;
-		height: 14px !important;
+		width: 14px;
+		height: 14px;
 	}
 }
 
@@ -74,78 +72,147 @@ input:focus {
 	padding-left: 10px;
 }
 
-.bs-title {
-	color: $gray-600 !important;
-	font-size: 27px !important; 
-	font-weight: 200 !important;
-}
-.bs-revised {
-	color: $gray-600 !important;
-	font-size: 17px !important;;
+.truncate{
+	color: $gray-500;
+	font-family: Georgia,Times,Times New Roman,serif; 
 }
 
-.bs-time-posted {
-	font-size: 12px !important;
-	border-top: 1px solid $gray-400 !important
+
+
+// Pages
+/////////////////////////////////////////////////////////////
+
+#homepage{
+	margin-top: 150px;
 }
 
-.category-box {
-	border-top: 1px solid $gray-400 !important;
-	ul {
-		list-style: none !important;
-		padding: none !important;
-		margin: none !important;
-		li {
-			background-color: lighten($primary, 35%) !important;
-			font-size: 12px !important;
-			list-style: none !important;;
-			display: inline-block;
-			margin-right: 20px;
-			text-align: center;
-			padding: 10px !important;
-			margin-top: 5px !important;
 
-			a {
-				color: $primary !important;
-			}
-		}
-		&:first-child {
-			margin-left: 0px !important;
-			padding-left: 0px !important;
-		}
+
+// Search Results
+/////////////////////////////////////////////////////////////
+
+.bs-date {
+	color: #9B9B9B;
+}
+
+.card{
+	padding: 0px 5px;
+	background-color: white;
+	margin: none;
+	border-radius: 5px;
+	border: none;
+	box-shadow: $el-2;
+	transition: all .35s;
+	&:hover{
+		box-shadow: $el-4;
 	}
-}
-.card {
-	padding: 25px 25px 15	px 25px !important;
-	background-color: white !important;
-	margin: none !important;
-	border-radius: 5px !important;
-	box-shadow: none !important;
 	a {
-		color: $gray-600 !important;
+		color: $gray-700;
+		transition: all .35s;		
+		&:hover{
+			text-decoration: none;
+			color: $gray-600;
+		}
 	}
 	.bs-search-results {
-		margin: 20px !important;
-		padding-bottom: 0px !important;
+		margin: 20px;
+		padding-bottom: 0px;
 	}
 }
 
 .bs-search-results {
-	margin: 20px !important;
-	padding-bottom: 20px !important;
+	margin: 20px;
+	padding-bottom: 20px;
 }
 
-.post-category {
-	padding: 0px !important;
-	margin: 0px !important;
-	list-style: none !important;
+
+
+// Sidebar
+/////////////////////////////////////////////////////////////
+.right-sidebar{
+	h5{
+		border-bottom: 1px solid $gray-300;
+		color: $gray-600;
+	}
+	.bs-time-modified{
+		color: $gray-500;
+		font-size: 14px;
+	}
+	.tag-box{
+		ul{
+			list-style-type: none;
+			padding-left: 0px;
+			li{
+				display: inline-block;
+				margin-right: 25px;
+				font-size: 14px;
+				a{
+					transition: all .35s;
+					&:hover{
+						color: lighten($primary, 20%);
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+// Single Result
+/////////////////////////////////////////////////////////////
+
+.bs-title h3{
+	color: $gray-600;
+	font-size: 27px; 
+	font-weight: 200;
+}
+
+.category-box {
+	ul {
+		list-style: none;
+		padding: none;
+		margin: none;
+		li {
+			background-color: lighten($primary, 35%);
+			list-style: none;
+			display: inline-block;
+			margin-right: 20px;
+			text-align: center;
+			margin-top: 5px;
+			a {
+				color: $primary;
+				display: inline-block;
+				padding: 5px 7px;
+				font-size: 12px;
+				transition: all .35s;
+				&:hover{
+					text-decoration: none;
+					background-color: lighten($primary, 15%);
+					color: $white;
+				}
+			}
+		}
+		&:first-child {
+			margin-left: 0px;
+			padding-left: 0px;
+		}
+	}
+}
+
+
+.post-categories {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
 }
 
 .bs-content {
 	p {
-		font-size: 12px !important;
-		font-weight: 100 !important;
-		color: $gray-600 !important;
+		font-size: 14px;
+		font-weight: 100;
+		color: $gray-600;
 	}
 }
 

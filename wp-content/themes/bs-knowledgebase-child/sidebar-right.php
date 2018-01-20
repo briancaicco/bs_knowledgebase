@@ -13,17 +13,21 @@ if ( ! is_active_sidebar( 'right-sidebar' ) ) {
 $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
 
-	<div class="col">
-		<p class="lead bs-revised">Last Revised</p>
-		<div class="bs-time-posted pt-3"><?php understrap_posted_on(); ?></div><br>
-		<p class="lead bs-revised">Categories</p>
-		<div class="mr-auto category-box pt-3">
-			<?php bs_category();?>
-		</div>
-		<p class="lead mt-4 bs-revised">Tags</p>
-		<div class="mr-auto category-box pt-3">
-			<ul>
-				<?php bs_tags();?>
-			</ul>
-		</div>
-	</div>
+
+<div class="bs-time-modified">
+	<h5 class="pb-3">Last Revised</h5>
+	<p><?php echo get_post_modified_time('F d, Y', true);?></p>		
+</div>
+
+<div class="mt-5 mr-auto category-box">
+	<h5 class="pb-3">Categories</h5>
+	<?php bs_category();?>
+</div>
+
+<div class="mt-5 mr-auto tag-box">
+	<h5 class="pb-3">Tags</h5>
+	<ul>
+		<?php bs_tags();?>
+	</ul>
+</div>
+

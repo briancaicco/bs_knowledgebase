@@ -12,3 +12,25 @@
 
 $primary: #3FCF8E;
 
+
+// Drop Shadows
+$el-1: 0 0 1px rgba(22,22,34,.11),0 1px 2px rgba(22,22,34,.22);
+$el-2: 0 0 2px rgba(22,22,34,.12),0 2px 4px rgba(22,22,34,.24);
+$el-3: 0 0 3px rgba(22,22,34,.13),0 3px 6px rgba(22,22,34,.26);
+$el-4: 0 0 4px rgba(22,22,34,.14),0 4px 8px rgba(22,22,34,.28);
+$el-5: 0 0 5px rgba(22,22,34,.15),0 5px 10px rgba(22,22,34,.30);
+$el-6: 0 0 6px rgba(22,22,34,.16),0 6px 12px rgba(22,22,34,.32);
+$el-7: 0 0 7px rgba(22,22,34,.17),0 7px 14px rgba(22,22,34,.34);
+$el-8: 0 0 14px rgba(22,22,34,.17),0 14px 28px rgba(22,22,34,.07);
+$el-9: 0 0 18px rgba(22,22,34,.17),0 18px 32px rgba(22,22,34,.07);
+
+.el-1{box-shadow: $el-1;}
+.el-2{box-shadow: $el-2;}
+.el-3{box-shadow: $el-3;}
+.el-4{box-shadow: $el-4;}
+.el-5{box-shadow: $el-5;}
+.el-6{box-shadow: $el-6;}
+.el-7{box-shadow: $el-7;}
+.el-8{box-shadow: $el-8;}
+.el-9{box-shadow: $el-9;}
+

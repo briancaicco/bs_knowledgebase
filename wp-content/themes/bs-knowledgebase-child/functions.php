@@ -64,33 +64,6 @@ function theme_enqueue_styles() {
     }
 }
 
-if ( ! function_exists( 'understrap_posted_on' ) ) :
-/**
- * Prints HTML with meta information for the current post-date/time and author.
- */
-function understrap_posted_on() {
-    $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-    if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-        $time_string = '<time class="updated" datetime="%3$s"> %4$s </time>'; //<time class="entry-date published" datetime="%1$s">%2$s</time>
-    }
-    $time_string = sprintf( $time_string,
-        esc_attr( get_the_date( 'c' ) ),
-        esc_html( get_the_date() ),
-        esc_attr( get_the_modified_date( 'c' ) ),
-        esc_html( get_the_modified_date() )
-    );
-    $posted_on = sprintf(
-        esc_html_x( '%s', 'post date', 'understrap' ),
-        '<p class="bs-date">' . $time_string . '</p>'
-    );
-    // $byline = sprintf(
-    //     esc_html_x( 'by %s', 'post author', 'understrap' ),
-    //     '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-    // );
-    echo '<span class="posted-on">' . $posted_on; // WPCS: XSS OK.
-}
-endif;
-
 function bs_tags( $before = '<li>', $sep = '</li><li>', $after = '</li>' ) {
 
     $the_tags = get_the_tag_list( $before, $sep, $after );
@@ -102,4 +75,35 @@ function bs_tags( $before = '<li>', $sep = '</li><li>', $after = '</li>' ) {
 
 function bs_category( $separator = '', $parents = '', $post_id = false ) {
     echo get_the_category_list( $separator, $parents, $post_id );
+}
+
+// Exclude Pages from search results
+//////////////////////////////////////////////////////////////////////
+if (!is_admin()) {
+    function wpb_search_filter($query) {
+        if ($query->is_search) {
+            $query->set('post_type', 'post');
+        }
+        return $query;
+    }
+    add_filter('pre_get_posts','wpb_search_filter');
+}
+
+// Custom Loginout Link
+//////////////////////////////////////////////////////////////////////
+
+function bs_loginout($redirect = '', $echo = true) {
+  if ( ! is_user_logged_in() )
+    $link = '<a class="nav-link" href="' . esc_url( wp_login_url($redirect) ) . '">' . __('Log in') . '</a>';
+else
+    $link = '<a class="nav-link" href="' . esc_url( wp_logout_url($redirect) ) . '">' . __('Log out') . '</a>';
+
+if ( $echo ) {
+
+    echo apply_filters( 'loginout', $link );
+
+} else {
+
+    return apply_filters( 'loginout', $link );
+}
 }
