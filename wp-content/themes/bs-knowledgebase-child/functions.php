@@ -89,6 +89,8 @@ if (!is_admin()) {
     add_filter('pre_get_posts','wpb_search_filter');
 }
 
+
+
 // Custom Loginout Link
 //////////////////////////////////////////////////////////////////////
 

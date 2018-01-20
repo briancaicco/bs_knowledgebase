@@ -33,7 +33,9 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						?>
 						<div class="col-md-4 d-flex align-items-stretch">
 							<div class="card mt-5 w-100 p-1 pt-2">
-								<?php get_template_part( 'loop-templates/content', 'search' ); ?>	
+								<div class="card-body">
+									<?php get_template_part( 'loop-templates/content', 'search' ); ?>
+								</div>
 							</div>
 						</div>
 					<?php endwhile; else : ?>

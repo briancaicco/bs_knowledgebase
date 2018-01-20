@@ -39,7 +39,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<a class="nav-link" href="<?php bloginfo('url')?>">Home<span class="sr-only">(current)</span></a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Categories</a>
+								<a class="nav-link" href="<?php bloginfo('url')?>/categories">Categories</a>
 							</li>
 							<li class="nav-item">
 								<?php bs_loginout( '', true ); ?>

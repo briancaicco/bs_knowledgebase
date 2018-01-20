@@ -19,12 +19,12 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 	<p><?php echo get_post_modified_time('F d, Y', true);?></p>		
 </div>
 
-<div class="mt-5 mr-auto category-box">
+<div class="mt-5 mr-auto category-wrapper">
 	<h5 class="pb-3">Categories</h5>
 	<?php bs_category();?>
 </div>
 
-<div class="mt-5 mr-auto tag-box">
+<div class="mt-5 mr-auto tag-wrapper">
 	<h5 class="pb-3">Tags</h5>
 	<ul>
 		<?php bs_tags();?>

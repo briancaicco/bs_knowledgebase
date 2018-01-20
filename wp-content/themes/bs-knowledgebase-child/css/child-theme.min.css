@@ -9749,7 +9749,6 @@ input:focus {
 
 .card {
   padding: 0px 5px;
-  background-color: white;
   margin: none;
   border-radius: 5px;
   border: none;
@@ -9763,13 +9762,46 @@ input:focus {
     .card a:hover {
       text-decoration: none;
       color: #868e96; }
-  .card .bs-search-results {
-    margin: 20px;
-    padding-bottom: 0px; }
-
-.bs-search-results {
-  margin: 20px;
-  padding-bottom: 20px; }
+  .card .category-wrapper ul {
+    list-style: none;
+    padding: none;
+    margin: none; }
+    .card .category-wrapper ul li {
+      background-color: #cef3e2;
+      list-style: none;
+      display: inline-block;
+      margin-right: 20px;
+      text-align: center;
+      margin-top: 5px; }
+      .card .category-wrapper ul li a {
+        color: #3FCF8E;
+        display: inline-block;
+        padding: 5px 7px;
+        font-size: 12px;
+        transition: all .35s; }
+        .card .category-wrapper ul li a:hover {
+          text-decoration: none;
+          background-color: #7cdeb2;
+          color: #fff; }
+    .card .category-wrapper ul:first-child {
+      margin-left: 0px;
+      padding-left: 0px; }
+  .card .cat-link {
+    background-color: #cef3e2;
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+    text-align: center;
+    margin-top: 5px;
+    color: #3FCF8E;
+    display: inline-block;
+    padding: 5px 7px;
+    font-size: 12px;
+    transition: all .35s; }
+    .card .cat-link:hover {
+      text-decoration: none;
+      background-color: #7cdeb2;
+      color: #fff; }
 
 .right-sidebar h5 {
   border-bottom: 1px solid #dee2e6;
@@ -9779,16 +9811,41 @@ input:focus {
   color: #adb5bd;
   font-size: 14px; }
 
-.right-sidebar .tag-box ul {
+.right-sidebar .category-wrapper ul {
+  list-style: none;
+  padding: none;
+  margin: none; }
+  .right-sidebar .category-wrapper ul li {
+    background-color: #cef3e2;
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+    text-align: center;
+    margin-top: 5px; }
+    .right-sidebar .category-wrapper ul li a {
+      color: #3FCF8E;
+      display: inline-block;
+      padding: 5px 7px;
+      font-size: 12px;
+      transition: all .35s; }
+      .right-sidebar .category-wrapper ul li a:hover {
+        text-decoration: none;
+        background-color: #7cdeb2;
+        color: #fff; }
+  .right-sidebar .category-wrapper ul:first-child {
+    margin-left: 0px;
+    padding-left: 0px; }
+
+.right-sidebar .tag-wrapper ul {
   list-style-type: none;
   padding-left: 0px; }
-  .right-sidebar .tag-box ul li {
+  .right-sidebar .tag-wrapper ul li {
     display: inline-block;
     margin-right: 25px;
     font-size: 14px; }
-    .right-sidebar .tag-box ul li a {
+    .right-sidebar .tag-wrapper ul li a {
       transition: all .35s; }
-      .right-sidebar .tag-box ul li a:hover {
+      .right-sidebar .tag-wrapper ul li a:hover {
         color: #91e3be;
         text-decoration: none; }
 
@@ -9796,31 +9853,6 @@ input:focus {
   color: #868e96;
   font-size: 27px;
   font-weight: 200; }
-
-.category-box ul {
-  list-style: none;
-  padding: none;
-  margin: none; }
-  .category-box ul li {
-    background-color: #cef3e2;
-    list-style: none;
-    display: inline-block;
-    margin-right: 20px;
-    text-align: center;
-    margin-top: 5px; }
-    .category-box ul li a {
-      color: #3FCF8E;
-      display: inline-block;
-      padding: 5px 7px;
-      font-size: 12px;
-      transition: all .35s; }
-      .category-box ul li a:hover {
-        text-decoration: none;
-        background-color: #7cdeb2;
-        color: #fff; }
-  .category-box ul:first-child {
-    margin-left: 0px;
-    padding-left: 0px; }
 
 .post-categories {
   padding: 0px;

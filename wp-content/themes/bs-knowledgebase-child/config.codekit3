@@ -430,6 +430,13 @@
 		"oAP": "\/loop-templates\/content-blank.php",
 		"oF": 0
 		},
+	"\/loop-templates\/content-categories.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/loop-templates\/content-categories.php",
+		"oF": 0
+		},
 	"\/loop-templates\/content-empty.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -479,6 +486,13 @@
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
+		},
+	"\/page-templates\/page-categories.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/page-templates\/page-categories.php",
+		"oF": 0
 		},
 	"\/page.php": {
 		"cB": 0,

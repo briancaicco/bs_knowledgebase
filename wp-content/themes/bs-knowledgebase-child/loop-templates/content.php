@@ -6,10 +6,9 @@
  */
 
 ?>		
-<div class="bs-search-results">
-	<?php the_title( sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-'</a>' ); ?>
+<div class="article-title">
+	<?php the_title( sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),'</a>' ); ?>
 </div>
-<div class="category-box pt-3 bs-search-results">
+<div class="category-wrapper pt-3">
 	<?php bs_category();?>
 </div>

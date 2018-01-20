@@ -15,14 +15,14 @@ $container   = get_theme_mod( 'understrap_container_type' );
 ?>
 
 			
-<div class="container-fluid">
+<div class="container">
 	<?php if ( have_posts() ) : ?>
-			<div class="row ml-5 pl-5">
+			<div class="row">
 				<div class="col mt-5 bs-title">
 					<h3><?php the_archive_title( '', '' );?></h3>
 				</div>
 			</div>
-			<div class="row flex-row pl-5 ml-5 mr-5">
+			<div class="row">
 				<?php while ( have_posts() ) : the_post(); ?>
 				<?php
 
@@ -36,7 +36,14 @@ $container   = get_theme_mod( 'understrap_container_type' );
 								<?php get_template_part('loop-templates/content');
 						?></div>
 						</div>
-					<?php endwhile; ?>
+					<?php endwhile; else : ?>
+						<div class="row">
+							<div class="col text-center ml-auto mt-3 mt-md-5 pt-md-5">
+								<h3>Sorry mate, nothing here matches your search. </h3>
+								<h3>¯\_(ツ)_/¯</h3>
+								<p><a href="<?php bloginfo( 'url' ); ?>">Try again?</a></p>
+							</div>
+						</div>
 				<?php endif;  ?>
 			</div>
 		</div>
