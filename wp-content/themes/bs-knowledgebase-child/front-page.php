@@ -13,5 +13,8 @@
 			<?php get_search_form();?>
 		</div>
 	</div>
+	<div class="row mt-md-5">
+		<?php get_template_part( 'loop-templates/content', 'categories' ); ?>
+	</div>
 </div>
 <?php get_footer(); ?>
