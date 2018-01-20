@@ -9762,6 +9762,8 @@ input:focus {
     .card a:hover {
       text-decoration: none;
       color: #868e96; }
+  .card .small {
+    color: #adb5bd; }
   .card .category-wrapper ul {
     list-style: none;
     padding: none;

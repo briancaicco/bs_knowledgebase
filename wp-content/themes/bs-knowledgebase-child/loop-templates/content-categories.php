@@ -24,10 +24,10 @@
                     );
 
                     echo "<div class='article-title mb-4'>";
-                    echo $category_link . ' (' . $category->count . ')';
+                    echo $category_link;
                     echo "</div>";
-                    echo '<p>' . $category->description . '</p>';
-                    echo "<a class='cat-link' href='" . esc_url( get_category_link( $category->term_id ) ) . "'>View all articles</a>";
+                    echo '<p class="small">' . $category->description . '</p>';
+                    echo "<a class='cat-link' href='" . esc_url( get_category_link( $category->term_id ) ) . "'>View all articles" . ' (' . $category->count . ')' . "</a>";
 
                     // echo '<p>' . sprintf( esc_html__( '%s', 'textdomain' ), $category_link ) . '</p> ';
                     // echo '<p>' . sprintf( esc_html__( '%s', 'textdomain' ), $category->description ) . '</p>';
