@@ -35,9 +35,6 @@ function remove_cssjs_ver( $src ) {
 add_filter( 'style_loader_src', 'remove_cssjs_ver', 10, 2 );
 add_filter( 'script_loader_src', 'remove_cssjs_ver', 10, 2 );
 
-update_option( 'siteurl', 'http://localhost:8888/bs-knowledgebase' );
-update_option( 'home', 'http://localhost:8888/bs-knowledgebase' );
-
 function understrap_remove_scripts() {
     wp_dequeue_style( 'understrap-styles' );
     wp_deregister_style( 'understrap-styles' );
