@@ -9865,3 +9865,8 @@ input:focus {
   font-size: 14px;
   font-weight: 100;
   color: #868e96; }
+
+.bs-content ul li {
+  font-size: 14px;
+  font-weight: 100;
+  color: #868e96; }
