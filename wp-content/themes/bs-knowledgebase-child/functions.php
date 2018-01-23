@@ -106,3 +106,13 @@ if ( $echo ) {
     return apply_filters( 'loginout', $link );
 }
 }
+
+// Password Protects Site
+//////////////////////////////////////////////////////////////////////
+
+function bs_authenticate() {
+    if ( !is_user_logged_in() ) {
+        auth_redirect();
+    }
+}
+add_action ('template_redirect', 'bs_authenticate');
