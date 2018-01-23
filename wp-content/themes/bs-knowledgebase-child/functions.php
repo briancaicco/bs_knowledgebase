@@ -87,7 +87,6 @@ if (!is_admin()) {
 }
 
 
-
 // Custom Loginout Link
 //////////////////////////////////////////////////////////////////////
 
@@ -115,4 +114,4 @@ function bs_authenticate() {
         auth_redirect();
     }
 }
-add_action ('template_redirect', 'bs_authenticate');
+add_action ('template_redirect', 'bs_authenticate', $priority = 1);
